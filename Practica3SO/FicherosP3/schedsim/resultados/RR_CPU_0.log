@@ -1,0 +1,121 @@
+(t0): New task P1
+(t0): New task P2
+(t0): New task P3
+(t0): P1 running
+(t1): P1 running
+(t2): P1 running
+(t3): Task P1 goes to sleep until (t8)
+(t2): Context switch (P1)<->(P2)
+(t3): P2 running
+(t4): P2 running
+(t5): P2 running
+(t5): Context switch (P2)<->(P3)
+(t6): P3 running
+(t7): P3 running
+(t8): task P1 awake
+(t8): P3 running
+(t8): Context switch (P3)<->(P2)
+(t9): P2 running
+(t10): P2 running
+(t11): P2 running
+(t11): Context switch (P2)<->(P1)
+(t12): P1 running
+(t13): P1 running
+(t14): P1 running
+(t15): Task P1 goes to sleep until (t20)
+(t14): Context switch (P1)<->(P3)
+(t15): P3 running
+(t16): Task P3 goes to sleep until (t20)
+(t15): Context switch (P3)<->(P2)
+(t16): P2 running
+(t17): Task P2 goes to sleep until (t20)
+(t16): Context switch (P2)<->(idle)
+(t17): idle running
+(t18): idle running
+(t19): idle running
+(t20): task P1 awake
+(t20): task P3 awake
+(t20): task P2 awake
+(t19): Context switch (idle)<->(P1)
+(t20): P1 running
+(t21): P1 running
+(t22): P1 running
+(t23): Task P1 goes to sleep until (t28)
+(t22): Context switch (P1)<->(P3)
+(t23): P3 running
+(t24): P3 running
+(t25): P3 running
+(t25): Context switch (P3)<->(P2)
+(t26): P2 running
+(t27): P2 running
+(t28): P2 running
+(t28): Context switch (P2)<->(P3)
+(t29): P3 running
+(t30): Task P3 goes to sleep until (t34)
+(t29): Context switch (P3)<->(P2)
+(t30): P2 running
+(t31): P2 running
+(t32): P2 running
+(t33): P2 running
+(t34): Task P2 goes to sleep until (t37)
+(t34): task P3 awake
+(t33): Context switch (P2)<->(P3)
+(t34): P3 running
+(t35): P3 running
+(t36): P3 running
+(t37): task P2 awake
+(t36): Context switch (P3)<->(P2)
+(t37): P2 running
+(t38): P2 running
+(t39): P2 running
+(t39): Context switch (P2)<->(P3)
+(t40): P3 running
+(t41): Task P3 goes to sleep until (t45)
+(t40): Context switch (P3)<->(P2)
+(t41): P2 running
+(t42): P2 running
+(t43): P2 running
+(t44): P2 running
+(t45): Task P2 goes to sleep until (t48)
+(t44): Context switch (P2)<->(idle)
+(t45): idle running
+(t46): idle running
+(t47): idle running
+==================
+P1	0	3	running
+P1	3	8	I/O
+P1	8	12	ready
+P1	12	15	running
+P1	15	20	I/O
+P1	20	23	running
+P1	23	28	I/O
+P2	0	3	ready
+P2	3	6	running
+P2	6	9	ready
+P2	9	12	running
+P2	12	16	ready
+P2	16	17	running
+P2	17	20	I/O
+P2	20	26	ready
+P2	26	29	running
+P2	29	30	ready
+P2	30	34	running
+P2	34	37	I/O
+P2	37	40	running
+P2	40	41	ready
+P2	41	45	running
+P2	45	48	I/O
+P3	0	6	ready
+P3	6	9	running
+P3	9	15	ready
+P3	15	16	running
+P3	16	20	I/O
+P3	20	23	ready
+P3	23	26	running
+P3	26	29	ready
+P3	29	30	running
+P3	30	34	I/O
+P3	34	37	running
+P3	37	40	ready
+P3	40	41	running
+P3	41	45	I/O

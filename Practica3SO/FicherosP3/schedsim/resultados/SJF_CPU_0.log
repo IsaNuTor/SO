@@ -1,0 +1,99 @@
+(t0): New task P1
+(t0): New task P2
+(t0): New task P3
+(t0): P1 running
+(t1): P1 running
+(t2): P1 running
+(t3): Task P1 goes to sleep until (t8)
+(t2): Context switch (P1)<->(P3)
+(t3): P3 running
+(t4): P3 running
+(t5): P3 running
+(t6): P3 running
+(t7): Task P3 goes to sleep until (t11)
+(t6): Context switch (P3)<->(P2)
+(t7): P2 running
+(t8): task P1 awake
+(t8): P2 running
+(t9): P2 running
+(t10): P2 running
+(t11): task P3 awake
+(t11): P2 running
+(t12): P2 running
+(t13): P2 running
+(t14): Task P2 goes to sleep until (t17)
+(t13): Context switch (P2)<->(P1)
+(t14): P1 running
+(t15): P1 running
+(t16): P1 running
+(t17): Task P1 goes to sleep until (t22)
+(t17): task P2 awake
+(t16): Context switch (P1)<->(P3)
+(t17): P3 running
+(t18): P3 running
+(t19): P3 running
+(t20): P3 running
+(t21): Task P3 goes to sleep until (t25)
+(t20): Context switch (P3)<->(P2)
+(t21): P2 running
+(t22): task P1 awake
+(t22): P2 running
+(t23): P2 running
+(t24): P2 running
+(t25): task P3 awake
+(t25): P2 running
+(t26): P2 running
+(t27): P2 running
+(t28): Task P2 goes to sleep until (t31)
+(t27): Context switch (P2)<->(P1)
+(t28): P1 running
+(t29): P1 running
+(t30): P1 running
+(t31): Task P1 goes to sleep until (t36)
+(t31): task P2 awake
+(t30): Context switch (P1)<->(P3)
+(t31): P3 running
+(t32): P3 running
+(t33): P3 running
+(t34): P3 running
+(t35): Task P3 goes to sleep until (t39)
+(t34): Context switch (P3)<->(P2)
+(t35): P2 running
+(t36): P2 running
+(t37): P2 running
+(t38): P2 running
+(t39): P2 running
+(t40): P2 running
+(t41): P2 running
+(t42): Task P2 goes to sleep until (t45)
+(t41): Context switch (P2)<->(idle)
+(t42): idle running
+(t43): idle running
+(t44): idle running
+==================
+P1	0	3	running
+P1	3	8	I/O
+P1	8	14	ready
+P1	14	17	running
+P1	17	22	I/O
+P1	22	28	ready
+P1	28	31	running
+P1	31	36	I/O
+P2	0	7	ready
+P2	7	14	running
+P2	14	17	I/O
+P2	17	21	ready
+P2	21	28	running
+P2	28	31	I/O
+P2	31	35	ready
+P2	35	42	running
+P2	42	45	I/O
+P3	0	3	ready
+P3	3	7	running
+P3	7	11	I/O
+P3	11	17	ready
+P3	17	21	running
+P3	21	25	I/O
+P3	25	31	ready
+P3	31	35	running
+P3	35	39	I/O
